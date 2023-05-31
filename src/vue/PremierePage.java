@@ -56,12 +56,11 @@ public class PremierePage extends JFrame{
         ImageIcon logoE = new ImageIcon("../data/image/logoEntreprise.png");
         this.logoEntreprise = new JLabel(logoE);
 
-        ImageIcon logoV = new ImageIcon("../data/image/logoNantes.png");
-        Image imageOrigin = logoV.getImage();
-        Image imageResize = imageOrigin.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
-        ImageIcon logoResize = new ImageIcon(imageResize);
-        this.logoVille = new JLabel(logoResize);
+        String imagePath = "../data/image/logoNantes.png";
+        Image imageResize = new ImageIcon(imagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
+        this.logoVille = new JLabel(new ImageIcon(imageResize));
         this.logoVille.setHorizontalAlignment(JLabel.LEFT);
+
 
 
         // Mise en place d'un layout de type GridLayout
