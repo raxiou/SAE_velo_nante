@@ -70,10 +70,15 @@ public class DataCompteurJour {
         this.jour = leJour;
     }
 
+    /**
+     * return the nbVeloH00
+     * @return a short nbVeloH00
+     */
     public short getNbVeloH00() {
         return nbVeloH00;
     }
 
+    
     public short getNbVeloH01() {
         return nbVeloH01;
     }
