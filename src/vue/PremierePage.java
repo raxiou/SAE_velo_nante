@@ -1,5 +1,7 @@
 package vue;
 import javax.swing.*;
+import javax.swing.border.Border;
+
 import java.awt.*;
 
 public class PremierePage extends JFrame{
@@ -64,13 +66,38 @@ public class PremierePage extends JFrame{
 
 
         // Mise en place d'un layout de type GridLayout
-        this.setLayout(new GridLayout(7, 3));
+        GridLayout gridLayout = new GridLayout(7, 3);
+        gridLayout.setHgap(10); // Espacement horizontal entre les composants
+        gridLayout.setVgap(10); // Espacement vertical entre les composants
+        this.setLayout(gridLayout);
+
+        // Création d'une bordure vide avec une couleur de votre choix
+        Color gridColor = Color.BLACK;
+        int borderWidth = 2;
+        Border gridBorder = BorderFactory.createLineBorder(gridColor, borderWidth);
+
+        // Ajout des composants avec des bordures pour les grilles
+        this.logoVille.setBorder(gridBorder);
+        this.logoEntreprise.setBorder(gridBorder);
+        this.cPresentation.setBorder(gridBorder);
+        this.lPresentation.setBorder(gridBorder);
+        this.petitLabel.setBorder(gridBorder);
+        this.champNom.setBorder(gridBorder);
+        this.champMDP.setBorder(gridBorder);
+        this.creatCompte.setBorder(gridBorder);
+        this.coAsInv.setBorder(gridBorder);
+        this.connexion.setBorder(gridBorder);
+
+
+        // Créez un GridBagConstraints pour le premier bouton et spécifiez la largeur et la hauteur à 2
+        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+        gridBagConstraints.gridwidth = 2;
 
         this.add(this.logoVille);
         this.add(this.logoEntreprise);
         this.add(new JLabel());
         this.add(new JLabel());
-        this.add(this.cPresentation);
+        this.add(this.cPresentation, gridBagConstraints);
         this.add(new JLabel());
 
 
