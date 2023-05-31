@@ -53,10 +53,10 @@ public class PremierePage extends JFrame{
         this.connexion.setSize(new Dimension(200, 50));
 
 
-        ImageIcon logoE = new ImageIcon("../../data/image/logoEntreprise.png");
+        ImageIcon logoE = new ImageIcon("../data/image/logoEntreprise.png");
         this.logoEntreprise = new JLabel(logoE);
 
-        ImageIcon logoV = new ImageIcon("../../data/image/logoNantes.png");
+        ImageIcon logoV = new ImageIcon("../data/image/logoNantes.png");
         Image imageOrigin = logoV.getImage();
         Image imageResize = imageOrigin.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
         ImageIcon logoResize = new ImageIcon(imageResize);
