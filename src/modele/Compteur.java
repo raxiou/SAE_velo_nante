@@ -1,3 +1,4 @@
+package modele;
 /**
  * Compteur
  */
@@ -5,7 +6,7 @@ public class Compteur {
     private int idCompteur;
     private String libelle;
     private String sens;
-    private int leQuartier;
+    private Quartier leQuartier;
     private double latitude;
     private double longitude;
     private String observation;
@@ -14,12 +15,13 @@ public class Compteur {
      * the constructor of Compteur, check the validity of the parameters
      * @param idCompteur a positive integer
      * @param libelleComplet a non-null string representing the name and direction of the compteur
-     * @param leQuartier a non-null string representing the name of the quartier
+     * @param leQuartier a quartier representing the name of the quartier
      * @param latitude a double between -90 and 90 representing the latitude of the compteur
      * @param longitude a double between -180 and 180 representing the longitude of the compteur
      * @param observation a string representing the observation of the compteur
+     * @throws IllegalArgumentException if the parameters are not valid
      */
-    public Compteur(int idCompteur, String libelleComplet, int quartier, double latitude, double longitude, String observation) {
+    public Compteur(int idCompteur, String libelleComplet, Quartier quartier, double latitude, double longitude, String observation) {
         if (idCompteur < 0) {
             throw new IllegalArgumentException("idCompteur must be positive");
         }
@@ -35,9 +37,10 @@ public class Compteur {
         if (observation == null) {
             throw new IllegalArgumentException("observation must not be null");
         }
-        if (quartier < 0) {
+        if (quartier == null) {
             throw new IllegalArgumentException("quartier must be positive");
         }
+
         separate(libelleComplet);
         this.idCompteur = idCompteur;
         this.leQuartier = quartier;
@@ -92,6 +95,10 @@ public class Compteur {
      */
     public String getObservation() {
         return observation;
+    }
+
+    public Quartier getLeQuartier() {
+        return leQuartier;
     }
 
     /**
@@ -149,6 +156,13 @@ public class Compteur {
         this.longitude = longitude;
     }
 
+    public void setQuartier(Quartier quartier) {
+        if (quartier == null) {
+            throw new IllegalArgumentException("quartier must not be null");
+        }
+        this.leQuartier = quartier;
+    }
+
     /**
      * the setter of observation
      * @param observation a non-null string representing the observation of the compteur
@@ -202,6 +216,10 @@ public class Compteur {
         return ret;
     }
 
+    /**
+     * separate the libelleComplet into libelle and sens and set them
+     * @param libelleComplet a String representing libelle and sens
+     */
     private void separate (String libelleComplet){
         String[] parts = libelleComplet.split(" vers ");
         if (parts.length == 2) {
@@ -210,7 +228,7 @@ public class Compteur {
             this.libelle = part1;
             this.sens = part2;
         } else {
-            System.out.println("La chaîne n'est pas au bon format.");
+            System.err.println("La chaîne n'est pas au bon format.");
         }
 
     }
