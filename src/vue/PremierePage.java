@@ -30,13 +30,8 @@ public class PremierePage extends JFrame{
         this.lPresentation = new JLabel("<html>BIKE vous permet de consulter de nombreuses données relatives au passage de vélos dans la ville de Nantes, et de visualiser ces données par zone définies.</html>");
         this.petitLabel = new JLabel("Se connecter :");
 
-        // Définition de la taille de police relative en pourcentage de la taille de l'écran
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int fontSizeTitre = (int) (screenSize.getHeight() * 0.05);
-        int fontSizeTexte = (int) (screenSize.getHeight() * 0.03);
-
-        Font titre = new Font("Arial",Font.BOLD,fontSizeTitre);
-        Font texte = new Font("Arial",Font.BOLD,fontSizeTexte);
+        Font titre = new Font("Arial",Font.BOLD,32);
+        Font texte = new Font("Arial",Font.BOLD,24);
 
         this.cPresentation.setFont(titre);
         this.cPresentation.setHorizontalAlignment(JLabel.CENTER);
