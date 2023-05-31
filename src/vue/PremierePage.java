@@ -56,7 +56,7 @@ public class PremierePage extends JFrame{
         ImageIcon logoE = new ImageIcon("../data/image/logoEntreprise.png");
         this.logoEntreprise = new JLabel(logoE);
 
-        ImageIcon logoV = new ImageIcon("../data/image/logoNantes.png");
+        ImageIcon logoV = new ImageIcon("../../data/image/logoNantes.png");
         Image imageOrigin = logoV.getImage();
         Image imageResize = imageOrigin.getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
         ImageIcon logoResize = new ImageIcon(imageResize);
@@ -93,6 +93,8 @@ public class PremierePage extends JFrame{
         this.add(new JLabel());
         this.add(this.connexion);
         this.add(new JLabel());
+
+        this.pack();
 
     }
 
