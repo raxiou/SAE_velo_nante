@@ -358,5 +358,34 @@ public class DataCompteurJour {
         this.jour = jour;
     }
 
+    public short totalPassage(){
+        short total = 0;
+        total += this.nbVeloH00;
+        total += this.nbVeloH01;
+        total += this.nbVeloH02;
+        total += this.nbVeloH03;
+        total += this.nbVeloH04;
+        total += this.nbVeloH05;
+        total += this.nbVeloH06;
+        total += this.nbVeloH07;
+        total += this.nbVeloH08;
+        total += this.nbVeloH09;
+        total += this.nbVeloH10;
+        total += this.nbVeloH11;
+        total += this.nbVeloH12;
+        total += this.nbVeloH13;
+        total += this.nbVeloH14;
+        total += this.nbVeloH15;
+        total += this.nbVeloH16;
+        total += this.nbVeloH17;
+        total += this.nbVeloH18;
+        total += this.nbVeloH19;
+        total += this.nbVeloH20;
+        total += this.nbVeloH21;
+        total += this.nbVeloH22;
+        total += this.nbVeloH23;
+        return total;
+    }
+
 
 }
