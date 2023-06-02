@@ -4,6 +4,8 @@ import javax.swing.border.Border;
 
 import java.awt.*;
 
+import Action.TailleMod;
+
 public class PremierePage extends JFrame {
     private JLabel cPresentation;
     private JLabel lPresentation;
@@ -30,7 +32,6 @@ public class PremierePage extends JFrame {
         this.cPresentation = new JLabel("<html>Informations relatives au passage de vélos à Nantes</html>");
         this.lPresentation = new JLabel("<html>BIKE vous permet de consulter de nombreuses données relatives au passage de vélos dans la ville de Nantes, et de visualiser ces données par zone définies.</html>");
         this.petitLabel = new JLabel("Se connecter :");
-
         Font titre = new Font("Arial", Font.BOLD, 32);
         Font texte = new Font("Arial", Font.BOLD, 24);
 
@@ -60,6 +61,9 @@ public class PremierePage extends JFrame {
         Image imageResize = new ImageIcon(imagePath).getImage().getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH);
         this.logoVille = new JLabel(new ImageIcon(imageResize));
         this.logoVille.setHorizontalAlignment(JLabel.LEFT);
+
+        TailleMod resizeListener = new TailleMod();
+        this.addComponentListener(resizeListener);
 
         // Mise en place d'un layout de type GridBagLayout
         GridBagLayout gridBagLayout = new GridBagLayout();
@@ -132,6 +136,7 @@ public class PremierePage extends JFrame {
             public void run() {
                 PremierePage laFrame = new PremierePage();
                 laFrame.setVisible(true);
+                System.out.println(laFrame.getSize().getWidth());
             }
         });
     }
