@@ -23,6 +23,8 @@ public class PremierePage extends JFrame {
 
     private int widthText = 100;
 
+    TailleMod resizeListener = new TailleMod(this);
+
     //private PremierePageListener listener;
 
     public PremierePage() {
@@ -39,11 +41,14 @@ public class PremierePage extends JFrame {
     }
 
     public void maj(){
+        resizeListener.setUserResized(false);
         System.out.println(this.widthText);
         this.cPresentation.setFont(new Font("Arial", Font.BOLD, widthText));
         this.lPresentation.setFont(new Font("Arial", Font.BOLD, (widthText/3)*2));
         this.petitLabel.setFont(new Font("Arial", Font.BOLD, widthText));
-        this.invalidate();
+        this.pack();
+        resizeListener.setUserResized(true);
+
     }
 
     private void initComponents() {
@@ -81,7 +86,7 @@ public class PremierePage extends JFrame {
         this.logoVille.setHorizontalAlignment(JLabel.LEFT);
 
         //ajout d'un listener pour la JFrame
-        TailleMod resizeListener = new TailleMod(this);
+        
         this.addComponentListener(resizeListener);
 
         // Mise en place d'un layout de type GridBagLayout
