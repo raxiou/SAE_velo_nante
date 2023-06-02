@@ -17,7 +17,7 @@ public class TailleMod extends ComponentAdapter {
     public void componentResized(ComponentEvent e) {
         if (userResized) {
             // Code à exécuter lorsque la taille de la JFrame est modifiée par l'utilisateur
-            System.out.println(e.getSource());
+            System.out.println(userResized);
             System.out.println(premierePage.getWidth() + " " + premierePage.getHeight());
 
             if (premierePage.getWidth() < 300) {
@@ -34,7 +34,6 @@ public class TailleMod extends ComponentAdapter {
 
             premierePage.maj();
         }
-        userResized = true; // Réinitialise l'indicateur après chaque redimensionnement
     }
 
     public void setUserResized(boolean resized) {

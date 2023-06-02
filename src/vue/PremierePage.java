@@ -42,6 +42,7 @@ public class PremierePage extends JFrame {
 
     public void maj(){
         resizeListener.setUserResized(false);
+        System.out.println("cc");
         System.out.println(this.widthText);
         this.cPresentation.setFont(new Font("Arial", Font.BOLD, widthText));
         this.lPresentation.setFont(new Font("Arial", Font.BOLD, (widthText/3)*2));
