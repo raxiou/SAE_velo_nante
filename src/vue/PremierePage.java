@@ -21,7 +21,7 @@ public class PremierePage extends JFrame {
     private JLabel logoEntreprise;
     private JLabel logoVille;
 
-    private short widthText = 100;
+    private int widthText = 100;
 
     //private PremierePageListener listener;
 
@@ -30,20 +30,28 @@ public class PremierePage extends JFrame {
         this.initComponents();
     }
 
-    public short getWidthText() {
+    public int getWidthText() {
         return this.widthText;
     }
 
-    public void setWidthText(short widthText) {
+    public void setWidthText(int widthText) {
         this.widthText = widthText;
+    }
+
+    public void maj(){
+        System.out.println(this.widthText);
+        this.cPresentation.setFont(new Font("Arial", Font.BOLD, widthText));
+        this.lPresentation.setFont(new Font("Arial", Font.BOLD, (widthText/3)*2));
+        this.petitLabel.setFont(new Font("Arial", Font.BOLD, widthText));
+        this.invalidate();
     }
 
     private void initComponents() {
         this.cPresentation = new JLabel("<html>Informations relatives au passage de vélos à Nantes</html>");
         this.lPresentation = new JLabel("<html>BIKE vous permet de consulter de nombreuses données relatives au passage de vélos dans la ville de Nantes, et de visualiser ces données par zone définies.</html>");
         this.petitLabel = new JLabel("Se connecter :");
-        Font titre = new Font("Arial", Font.BOLD, widthText/22500);
-        Font texte = new Font("Arial", Font.BOLD, widthText/30000);
+        Font titre = new Font("Arial", Font.BOLD, 32);
+        Font texte = new Font("Arial", Font.BOLD, 24);
 
         this.cPresentation.setFont(titre);
         this.cPresentation.setHorizontalAlignment(JLabel.CENTER);
