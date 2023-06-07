@@ -1,4 +1,10 @@
 package modele;
+/*
+ * Quartier is a class representing a district
+ * we have 2 method(others are getters and setters) :
+ * - equals : if we need to compare 2 districts we can use this method
+ * - toString : for the tests is more readable
+ */
 public class Quartier {
   
   private int id;

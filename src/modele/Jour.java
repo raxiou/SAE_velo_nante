@@ -1,7 +1,13 @@
 package modele;
 
 import modele.enumeration.*;
-
+/**
+ * Jour is a class representing a day
+ * we have 2 method(others are getters and setters) :
+ * - equals : if we need to compare 2 days we can use this method
+ * - toString : for the tests is more readable
+ * 
+ */
 public class Jour{
     private String date;
     private double temperatureMoyenne;

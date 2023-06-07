@@ -1,6 +1,13 @@
 package modele;
 /**
- * Compteur
+ * Compteur is a class representing a counter
+ * we have 3 method(others are getters and setters) :
+ * - equals : if we need to compare 2 counters we can use this method
+ * - toString : for the tests is more readable
+ * - separate : to construct the counter we need to separate the libelleComplet into libelle and sens
+ * because the data is like "libelle vers sens"
+ * 
+ * 
  */
 public class Compteur {
     private int idCompteur;

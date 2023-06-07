@@ -1,6 +1,10 @@
 package modele;
 /**
  * DataCompteurJour is a class representing the data of a compteur for each day
+ * we have the number of passage for each hour of the day
+ * the getter and setter of the class are the only way to access to the attributes
+ * we decide to use short for the number of passage because we don't need a big number
+ * we have add the methode totalPassage to have the total number of passage for the day
  */
 public class DataCompteurJour {
     private short nbVeloH00;
@@ -633,6 +637,7 @@ public class DataCompteurJour {
         total += this.nbVeloH23;
         return total;
     }
+
 
 
 }
