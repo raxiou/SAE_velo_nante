@@ -342,7 +342,6 @@ public class DataCompteurJour {
      * @param nbVeloH04 a short representing the number of passage at 04h
      * @throws IllegalArgumentException if nbVeloH04 is negative
      */
-     */
     public void setNbVeloH04(short nbVeloH04) {
         if (nbVeloH04 < 0) {
             throw new IllegalArgumentException("nbVeloH04 must not be negative");
@@ -367,7 +366,6 @@ public class DataCompteurJour {
      * @param nbVeloH06 a short representing the number of passage at 06h
      * @throws IllegalArgumentException if nbVeloH06 is negative
      */
-     */
     public void setNbVeloH06(short nbVeloH06) {
         if (nbVeloH06 < 0) {
             throw new IllegalArgumentException("nbVeloH06 must not be negative");
@@ -379,7 +377,6 @@ public class DataCompteurJour {
      * set the nbVeloH07 to nbVeloH07
      * @param nbVeloH07 a short representing the number of passage at 07h
      * @throws IllegalArgumentException if nbVeloH07 is negative
-     */
      */
     public void setNbVeloH07(short nbVeloH07) {
         if (nbVeloH07 < 0) {
