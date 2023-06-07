@@ -638,6 +638,15 @@ public class DataCompteurJour {
         return total;
     }
 
+    /**
+     * return a string representing the DataCompteurJour
+     * @return a string representing the DataCompteurJour
+     */
+    @Override
+    public String toString() {
+        return "DataCompteurJour{" + "nbVeloH00=" + nbVeloH00 + ", nbVeloH01=" + nbVeloH01 + ", nbVeloH02=" + nbVeloH02 + ", nbVeloH03=" + nbVeloH03 + ", nbVeloH04=" + nbVeloH04 + ", nbVeloH05=" + nbVeloH05 + ", nbVeloH06=" + nbVeloH06 + ", nbVeloH07=" + nbVeloH07 + ", nbVeloH08=" + nbVeloH08 + ", nbVeloH09=" + nbVeloH09 + ", nbVeloH10=" + nbVeloH10 + ", nbVeloH11=" + nbVeloH11 + ", nbVeloH12=" + nbVeloH12 + ", nbVeloH13=" + nbVeloH13 + ", nbVeloH14=" + nbVeloH14 + ", nbVeloH15=" + nbVeloH15 + ", nbVeloH16=" + nbVeloH16 + ", nbVeloH17=" + nbVeloH17 + ", nbVeloH18=" + nbVeloH18 + ", nbVeloH19=" + nbVeloH19 + ", nbVeloH20=" + nbVeloH20 + ", nbVeloH21=" + nbVeloH21 + ", nbVeloH22=" + nbVeloH22 + ", nbVeloH23=" + nbVeloH23 + ", presenceAnomalie=" + presenceAnomalie + ", compteur=" + compteur + ", jour=" + jour + '}';
+    }
+
 
 
 }

@@ -53,7 +53,7 @@ public class Jour{
                 this.vacance = EnumVacances.Toussaint;
             } else if(vacance.compareTo("Printemps") == 0){
                 this.vacance = EnumVacances.Printemps;
-            } else if(vacance == null){
+            } else if(vacance == "non"){
                 this.vacance = null;
             }
         } else {
