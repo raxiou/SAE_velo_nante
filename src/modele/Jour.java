@@ -56,27 +56,52 @@ public class Jour{
 
     }
     
+    /**
+     * return the date of the day
+     * @return a string representing the date
+     */
     public String getDate(){
         return this.date;
     }
 
+    /**
+     * return the average temperature of the day
+     * @return a double representing the average temperature of the day
+     */
     public double temperatureMoyenne(){
         return this.temperatureMoyenne;
     }
 
+    /**
+     * return the day of the week
+     * @return an EnumJour representing the day of the week
+     */
     public EnumJour getJour(){
         return this.jour;
     }
 
+    /**
+     * return the holiday of the day
+     * @return an EnumVacances representing the holiday of the day
+     */
     public EnumVacances getVacance(){
         return this.vacance;
     }
 
+    /**
+     * return a string representing the day
+     * @return a string representing the day
+     */
     @Override
     public String toString(){
         return "Date : " + this.date + " Jour : " + this.jour + " Température moyenne : " + this.temperatureMoyenne + " Vacance : " + this.vacance;
     }
 
+    /**
+     * return true if the object is equal to the current object
+     * @param o an object
+     * @return true if the object is equal to the current object
+     */
     @Override
     public boolean equals(Object o){
         if(o instanceof Jour){
@@ -87,6 +112,11 @@ public class Jour{
         }
     }
 
+    /**
+     * set the date of the day
+     * @param date a string representing the dates
+     * @throws IllegalArgumentException if the parameter is not valid
+     */
     public void setDate(String date){
         if(date != null){
             this.date = date;
@@ -95,10 +125,19 @@ public class Jour{
         }
     }
 
+    /**
+     * set the average temperature of the day
+     * @param temp a double representing the average temperature of the day
+     */
     public void setTemperatureMoyenne(double temp){
         this.temperatureMoyenne = temp;
     }
 
+    /**
+     * set the day of the week
+     * @param numeroJour a positive integer representing the day of the week
+     * @throws IllegalArgumentException if the parameter is not valid
+     */
     public void setJour(int numeroJour){
         if((numeroJour <= 7) && (numeroJour > 0)){
             if(numeroJour == 1){
@@ -121,6 +160,11 @@ public class Jour{
         }
     }
 
+    /**
+     * set the holiday of the day
+     * @param vacance a string representing the holiday of the day
+     * @throws IllegalArgumentException if the parameter is not valid
+     */
     public void setVacance(String vacance){
         if((vacance.compareTo("Noel")) == 0){
             this.vacance = EnumVacances.Noel;
