@@ -1,4 +1,4 @@
-package modele;
+package modele.objectBdd;
 /*
  * Quartier is a class representing a district
  * we have 2 method(others are getters and setters) :

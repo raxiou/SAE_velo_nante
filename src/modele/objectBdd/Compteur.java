@@ -1,4 +1,5 @@
-package modele;
+package modele.objectBdd;
+
 /**
  * Compteur is a class representing a counter
  * we have 3 method(others are getters and setters) :
@@ -22,7 +23,7 @@ public class Compteur {
      * the constructor of Compteur, check the validity of the parameters
      * @param idCompteur a positive integer
      * @param libelleComplet a non-null string representing the name and direction of the compteur
-     * @param leQuartier a quartier representing the name of the quartier
+     * @param leQuartier a quartier representing the name of the quartier can be null
      * @param latitude a double between -90 and 90 representing the latitude of the compteur
      * @param longitude a double between -180 and 180 representing the longitude of the compteur
      * @param observation a string representing the observation of the compteur
@@ -40,12 +41,6 @@ public class Compteur {
         }
         if (longitude < -180 || longitude > 180) {
             throw new IllegalArgumentException("longitude must be between -180 and 180");
-        }
-        if (observation == null) {
-            throw new IllegalArgumentException("observation must not be null");
-        }
-        if (quartier == null) {
-            throw new IllegalArgumentException("quartier must be positive");
         }
 
         separate(libelleComplet);
@@ -164,9 +159,6 @@ public class Compteur {
     }
 
     public void setQuartier(Quartier quartier) {
-        if (quartier == null) {
-            throw new IllegalArgumentException("quartier must not be null");
-        }
         this.leQuartier = quartier;
     }
 
@@ -175,9 +167,6 @@ public class Compteur {
      * @param observation a non-null string representing the observation of the compteur
      */
     public void setObservation(String observation) {
-        if (observation == null) {
-            throw new IllegalArgumentException("observation must not be null");
-        }
         this.observation = observation;
     }
     /**
@@ -193,6 +182,7 @@ public class Compteur {
                 ", leQuartier=" + leQuartier +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
+                ", observation='" + observation + '\'' +
                 '}';
     }
 
@@ -228,7 +218,8 @@ public class Compteur {
      * @param libelleComplet a String representing libelle and sens
      */
     private void separate (String libelleComplet){
-        String[] parts = libelleComplet.split(" vers ");
+        //separe le libelle et le sens, séparer par "vers" ou "Vers"
+        String[] parts = libelleComplet.split("vers|Vers");
         if (parts.length == 2) {
             String part1 = parts[0].trim();
             String part2 = parts[1].trim();

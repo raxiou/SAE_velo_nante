@@ -1,4 +1,4 @@
-package modele;
+package modele.objectBdd;
 /**
  * DataCompteurJour is a class representing the data of a compteur for each day
  * we have the number of passage for each hour of the day

@@ -1,4 +1,4 @@
-package modele;
+package modele.objectBdd;
 
 import modele.enumeration.*;
 /**
