@@ -30,6 +30,7 @@ public class PremierePage extends JFrame{
     }
 
     private void initComponents() {
+        this.listener = new PremierePageListener(this);
         this.cPresentation = new JLabel("<html>Informations relatives au passage de vélos à Nantes</html>");
         this.lPresentation = new JLabel("<html>BIKE vous permet de consulter de nombreuses données relatives au passage de vélos dans la ville de Nantes, et de visualiser ces données par zone définies.</html>");
         this.petitLabel = new JLabel("Se connecter :");
@@ -60,17 +61,19 @@ public class PremierePage extends JFrame{
 
         this.creatCompte = new JButton("Créer un compte");
         this.creatCompte.setPreferredSize(new Dimension(400, 50));
+        this.creatCompte.addActionListener(this.listener);
         JPanel cC = new JPanel();
         cC.setLayout(new FlowLayout());
         cC.add(this.creatCompte);
 
         this.coAsInv = new JButton("En tant qu'invité");
         this.coAsInv.setPreferredSize(new Dimension(400, 50));
+        this.coAsInv.addActionListener(this.listener);
         JPanel cAI = new JPanel();
         cAI.setLayout(new FlowLayout());
         cAI.add(this.coAsInv);
 
-        this.listener = new PremierePageListener(this);
+        
 
         this.connexion = new JButton("Connexion");
         this.connexion.setPreferredSize(new Dimension(400, 50));
