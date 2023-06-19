@@ -1,5 +1,7 @@
 import java.sql.*;
 
+import javax.swing.SwingUtilities;
+
 import modele.objectBdd.Compteur;
 import modele.objectBdd.DataCompteurJour;
 import modele.objectBdd.Jour;
@@ -8,6 +10,7 @@ import modele.objectBddListe.ListeCompteur;
 import modele.objectBddListe.ListeDataCompteurJour;
 import modele.objectBddListe.ListeJour;
 import modele.objectBddListe.ListeQuartier;
+import vue.PremierePage;
 
 
 public class Main {
@@ -165,10 +168,6 @@ public class Main {
                 Jour j = listeJour.chercheJour(jour);
                 Compteur c = ListeCompteur.chercheCompteur(id_compteur);
 
-                if(nbVeloH12 < 0){
-                    System.out.println("nbVeloH12 : " + nbVeloH12 + " jour : " + jour + " compteur : " + id_compteur);
-                }
-
                 DataCompteurJour dc = new DataCompteurJour(c, j);
                 dc.setpresenceAnomalie(anomalie);
                 dc.setNbVeloH00(nbVeloH00);
@@ -216,17 +215,21 @@ public class Main {
         }
 
         System.out.println("nombre de jour dans la liste : " + listeJour.getListeJour().size());
-        System.out.println(listeJour.chercheJour("2021-03-18"));
 
         System.out.println("nombre de quartier dans la liste : " + ListeQuartier.getListeQuartier().size());
-        System.out.println(ListeQuartier.chercheQuartier(3));
 
         System.out.println("nombre de compteur dans la liste : " + ListeCompteur.getListeCompteur().size());
-        System.out.println(ListeCompteur.chercheCompteur(89));
-        System.out.println(ListeCompteur.chercheCompteur(673).getObservation() == null);
         
         System.out.println("nombre de dataCompteurJour dans la liste : " + ListeDataCompteurJour.getListeDataCompteurJour().size());
-        System.out.println(ListeDataCompteurJour.chercheDataCompteurJour(ListeCompteur.chercheCompteur(664), listeJour.chercheJour("2021-03-18")));
         
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                PremierePage laFrame  = new PremierePage();
+                laFrame.pack();
+                laFrame.setSize(1920, 1080);
+                laFrame.setVisible(true);
+            }
+        });
+
     }
 }

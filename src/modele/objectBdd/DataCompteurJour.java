@@ -300,7 +300,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH00(short nbVeloH00) {
         if (nbVeloH00 < 0) {
-            throw new IllegalArgumentException("nbVeloH00 must not be negative");
+            nbVeloH00 = -1;
         }
         this.nbVeloH00 = nbVeloH00;
     }
@@ -312,7 +312,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH01(short nbVeloH01) {
         if (nbVeloH01 < 0) {
-            throw new IllegalArgumentException("nbVeloH01 must not be negative");
+            nbVeloH01 = -1;
         }
         this.nbVeloH01 = nbVeloH01;
     }
@@ -324,7 +324,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH02(short nbVeloH02) {
         if (nbVeloH02 < 0) {
-            throw new IllegalArgumentException("nbVeloH02 must not be negative");
+            nbVeloH02 = -1;
         }
         this.nbVeloH02 = nbVeloH02;
     }
@@ -336,7 +336,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH03(short nbVeloH03) {
         if (nbVeloH03 < 0) {
-            throw new IllegalArgumentException("nbVeloH03 must not be negative");
+            nbVeloH03 = -1;
         }
         this.nbVeloH03 = nbVeloH03;
     }
@@ -348,7 +348,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH04(short nbVeloH04) {
         if (nbVeloH04 < 0) {
-            throw new IllegalArgumentException("nbVeloH04 must not be negative");
+            nbVeloH04 = -1;
         }
         this.nbVeloH04 = nbVeloH04;
     }
@@ -360,7 +360,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH05(short nbVeloH05) {
         if (nbVeloH05 < 0) {
-            throw new IllegalArgumentException("nbVeloH05 must not be negative");
+            nbVeloH05 = -1;
         }
         this.nbVeloH05 = nbVeloH05;
     }
@@ -372,7 +372,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH06(short nbVeloH06) {
         if (nbVeloH06 < 0) {
-            throw new IllegalArgumentException("nbVeloH06 must not be negative");
+            nbVeloH06 = -1;
         }
         this.nbVeloH06 = nbVeloH06;
     }
@@ -384,7 +384,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH07(short nbVeloH07) {
         if (nbVeloH07 < 0) {
-            throw new IllegalArgumentException("nbVeloH07 must not be negative");
+            nbVeloH07 = -1;
         }
         this.nbVeloH07 = nbVeloH07;
     }
@@ -396,7 +396,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH08(short nbVeloH08) {
         if (nbVeloH08 < 0) {
-            throw new IllegalArgumentException("nbVeloH08 must not be negative");
+            nbVeloH08 = -1;
         }
         this.nbVeloH08 = nbVeloH08;
     }
@@ -408,7 +408,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH09(short nbVeloH09) {
         if (nbVeloH09 < 0) {
-            throw new IllegalArgumentException("nbVeloH09 must not be negative");
+            nbVeloH09 = -1;
         }
         this.nbVeloH09 = nbVeloH09;
     }
@@ -420,7 +420,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH10(short nbVeloH10) {
         if (nbVeloH10 < 0) {
-            throw new IllegalArgumentException("nbVeloH10 must not be negative");
+            nbVeloH10 = -1;
         }
         this.nbVeloH10 = nbVeloH10;
     }
@@ -432,7 +432,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH11(short nbVeloH11) {
         if (nbVeloH11 < 0) {
-            throw new IllegalArgumentException("nbVeloH11 must not be negative");
+            nbVeloH11 = -1;
         }
         this.nbVeloH11 = nbVeloH11;
     }
@@ -444,7 +444,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH12(short nbVeloH12) {
         if (nbVeloH12 < 0) {
-            throw new IllegalArgumentException("nbVeloH12 must not be negative");
+            nbVeloH12 = -1;
         }
         this.nbVeloH12 = nbVeloH12;
     }
@@ -456,7 +456,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH13(short nbVeloH13) {
         if (nbVeloH13 < 0) {
-            throw new IllegalArgumentException("nbVeloH13 must not be negative");
+            nbVeloH13 = -1;
         }
         this.nbVeloH13 = nbVeloH13;
     }
@@ -468,7 +468,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH14(short nbVeloH14) {
         if (nbVeloH14 < 0) {
-            throw new IllegalArgumentException("nbVeloH14 must not be negative");
+            nbVeloH14 = -1;
         }
         this.nbVeloH14 = nbVeloH14;
     }
@@ -480,7 +480,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH15(short nbVeloH15) {
         if (nbVeloH15 < 0) {
-            throw new IllegalArgumentException("nbVeloH15 must not be negative");
+            nbVeloH15 = -1;
         }
         this.nbVeloH15 = nbVeloH15;
     }
@@ -492,7 +492,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH16(short nbVeloH16) {
         if (nbVeloH16 < 0) {
-            throw new IllegalArgumentException("nbVeloH16 must not be negative");
+            nbVeloH16 = -1;
         }
         this.nbVeloH16 = nbVeloH16;
     }
@@ -504,7 +504,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH17(short nbVeloH17) {
         if (nbVeloH17 < 0) {
-            throw new IllegalArgumentException("nbVeloH17 must not be negative");
+            nbVeloH17 = -1;
         }
         this.nbVeloH17 = nbVeloH17;
     }
@@ -516,7 +516,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH18(short nbVeloH18) {
         if (nbVeloH18 < 0) {
-            throw new IllegalArgumentException("nbVeloH18 must not be negative");
+            nbVeloH18 = -1;
         }
         this.nbVeloH18 = nbVeloH18;
     }
@@ -528,7 +528,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH19(short nbVeloH19) {
         if (nbVeloH19 < 0) {
-            throw new IllegalArgumentException("nbVeloH19 must not be negative");
+            nbVeloH19 = -1;
         }
         this.nbVeloH19 = nbVeloH19;
     }
@@ -540,7 +540,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH20(short nbVeloH20) {
         if (nbVeloH20 < 0) {
-            throw new IllegalArgumentException("nbVeloH20 must not be negative");
+            nbVeloH20 = -1;
         }
         this.nbVeloH20 = nbVeloH20;
     }
@@ -552,7 +552,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH21(short nbVeloH21) {
         if (nbVeloH21 < 0) {
-            throw new IllegalArgumentException("nbVeloH21 must not be negative");
+            nbVeloH21 = -1;
         }
         this.nbVeloH21 = nbVeloH21;
     }
@@ -564,7 +564,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH22(short nbVeloH22) {
         if (nbVeloH22 < 0) {
-            throw new IllegalArgumentException("nbVeloH22 must not be negative");
+            nbVeloH22 = -1;
         }
         this.nbVeloH22 = nbVeloH22;
     }
@@ -576,7 +576,7 @@ public class DataCompteurJour {
      */
     public void setNbVeloH23(short nbVeloH23) {
         if (nbVeloH23 < 0) {
-            throw new IllegalArgumentException("nbVeloH23 must not be negative");
+            nbVeloH23 = -1;
         }
         this.nbVeloH23 = nbVeloH23;
     }

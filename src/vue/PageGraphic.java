@@ -1,6 +1,8 @@
+package vue;
+
 import javax.swing.*;
 
-import enumeration.*;
+import vue.enumeration.*;
 
 import java.awt.*;
 

@@ -1,4 +1,9 @@
+package vue;
+
 import javax.swing.*;
+
+import action.PremierePageListener;
+
 import java.awt.*;
 
 public class PremierePage extends JFrame{
@@ -16,7 +21,7 @@ public class PremierePage extends JFrame{
     private JLabel logoEntreprise;
     private JLabel logoVille;
 
-    //private PremierePageListener listener;
+    private PremierePageListener listener;
 
     public PremierePage() {
 
@@ -65,8 +70,11 @@ public class PremierePage extends JFrame{
         cAI.setLayout(new FlowLayout());
         cAI.add(this.coAsInv);
 
+        this.listener = new PremierePageListener(this);
+
         this.connexion = new JButton("Connexion");
         this.connexion.setPreferredSize(new Dimension(400, 50));
+        this.connexion.addActionListener(this.listener);
         JPanel cO = new JPanel();
         cO.setLayout(new FlowLayout());
         cO.add(this.connexion);
