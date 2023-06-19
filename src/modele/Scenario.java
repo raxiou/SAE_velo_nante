@@ -1,5 +1,10 @@
 package modele;
 
+import modele.objectBdd.Compteur;
+import modele.objectBdd.DataCompteurJour;
+import modele.objectBdd.Jour;
+import modele.objectBdd.Quartier;
+
 public class Scenario {
     /**
      * fait un scenario des class Compteur Jour Quartier DataCompteurJour
