@@ -6,6 +6,7 @@ import modele.objectBdd.Compteur;
 import modele.objectBdd.DataCompteurJour;
 import modele.objectBdd.Jour;
 
+
 public class ListeDataCompteurJour {
     ArrayList<DataCompteurJour> listeDataCompteurJour;
 

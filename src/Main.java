@@ -1,7 +1,15 @@
 import java.sql.*;
 
-import modele.objectBdd.*;
-import modele.objectBddListe.*;
+import modele.objectBdd.Compteur;
+import modele.objectBdd.DataCompteurJour;
+import modele.objectBdd.Jour;
+import modele.objectBdd.Quartier;
+import modele.objectBddListe.ListeCompteur;
+import modele.objectBddListe.ListeDataCompteurJour;
+import modele.objectBddListe.ListeJour;
+import modele.objectBddListe.ListeQuartier;
+
+
 public class Main {
 
     public static void main(String[] args) {

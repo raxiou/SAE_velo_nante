@@ -1,4 +1,4 @@
-package modele.enumeration;
+package enumeration;
 public enum EnumJour{
     Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche
 }

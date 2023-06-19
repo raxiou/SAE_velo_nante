@@ -1,4 +1,4 @@
-package modele.enumeration;
+package enumeration;
 public enum EnumVacances{
     Noel, Ascension, Hiver, Ete, Toussaint, Printemps
 }

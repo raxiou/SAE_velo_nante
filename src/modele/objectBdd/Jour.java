@@ -1,6 +1,8 @@
 package modele.objectBdd;
 
-import modele.enumeration.*;
+import vue.enumeration.EnumVacances;
+import vue.enumeration.EnumJour;
+
 /**
  * Jour is a class representing a day
  * we have 2 method(others are getters and setters) :
