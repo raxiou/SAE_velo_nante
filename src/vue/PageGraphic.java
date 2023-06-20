@@ -2,6 +2,8 @@ package vue;
 
 import javax.swing.*;
 
+import action.MouseListenerClique;
+import action.PageGraphicListener;
 import vue.enumeration.*;
 
 import java.awt.*;
@@ -18,7 +20,8 @@ public class PageGraphic extends JFrame{
     private JButton deconnexion;
     private JButton reload;
 
-    //private PremierePageListener listener;
+    private PageGraphicListener listener;
+    private MouseListenerClique listenerClique;
 
     public PageGraphic() {
 
@@ -27,6 +30,8 @@ public class PageGraphic extends JFrame{
     }
 
     private void initComponents() {
+        this.listener = new PageGraphicListener(this);
+        this.listenerClique = new MouseListenerClique(this);
         this.annee = new JComboBox<Annee>(Annee.values());
         this.annee.setPreferredSize(new Dimension(200, 50));
         JPanel bA = new JPanel(new FlowLayout());
@@ -51,6 +56,7 @@ public class PageGraphic extends JFrame{
 
         this.deconnexion = new JButton("Se deconnecter");
         this.deconnexion.setPreferredSize(new Dimension(200, 50));
+        this.deconnexion.addActionListener(this.listener);
         JPanel hautDroit = new JPanel();
         hautDroit.setLayout(new FlowLayout(FlowLayout.RIGHT));
         hautDroit.add(this.deconnexion);
@@ -75,6 +81,7 @@ public class PageGraphic extends JFrame{
         ImageIcon flecheResize = new ImageIcon(imageResize);
         this.flecheRetour = new JLabel(flecheResize);
         this.flecheRetour.setHorizontalAlignment(JLabel.LEFT);
+        this.flecheRetour.addMouseListener(this.listenerClique);
 
         ImageIcon carte = new ImageIcon("data\\carte.png");
         imageOrigin = carte.getImage();

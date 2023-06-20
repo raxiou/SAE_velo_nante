@@ -2,6 +2,7 @@ package vue;
 
 import javax.swing.*;
 
+import action.MouseListenerClique;
 import action.PageCarteListener;
 
 import java.awt.*;
@@ -18,6 +19,7 @@ public class PageCarte extends JFrame{
 
 
     private PageCarteListener listener;
+    private MouseListenerClique listenerClique;
 
     public PageCarte() {
 
@@ -27,6 +29,8 @@ public class PageCarte extends JFrame{
 
     private void initComponents() {
         this.listener = new PageCarteListener(this);
+        this.listenerClique = new MouseListenerClique(this);
+
         this.telecharger = new JButton("Télécharger");
         this.telecharger.setPreferredSize(new Dimension(400, 100));
         JPanel tel = new JPanel();
@@ -53,6 +57,7 @@ public class PageCarte extends JFrame{
         ImageIcon flecheResize = new ImageIcon(imageResize);
         this.flecheRetour = new JLabel(flecheResize);
         this.flecheRetour.setHorizontalAlignment(JLabel.LEFT);
+        this.flecheRetour.addMouseListener(this.listenerClique);
 
         ImageIcon carte = new ImageIcon("data\\carte.png");
         imageOrigin = carte.getImage();

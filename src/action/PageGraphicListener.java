@@ -8,10 +8,10 @@ import javax.swing.JFrame;
 
 import vue.PremierePage;
 
-public class PageCarteListener implements ActionListener {
+public class PageGraphicListener implements ActionListener {
     private JFrame frame;
 
-    public PageCarteListener(JFrame frame) {
+    public PageGraphicListener(JFrame frame) {
         this.frame = frame;
     }
 
