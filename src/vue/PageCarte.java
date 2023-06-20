@@ -1,6 +1,9 @@
 package vue;
 
 import javax.swing.*;
+
+import action.PageCarteListener;
+
 import java.awt.*;
 
 public class PageCarte extends JFrame{
@@ -14,7 +17,7 @@ public class PageCarte extends JFrame{
 
 
 
-    //private PremierePageListener listener;
+    private PageCarteListener listener;
 
     public PageCarte() {
 
@@ -23,6 +26,7 @@ public class PageCarte extends JFrame{
     }
 
     private void initComponents() {
+        this.listener = new PageCarteListener(this);
         this.telecharger = new JButton("Télécharger");
         this.telecharger.setPreferredSize(new Dimension(400, 100));
         JPanel tel = new JPanel();
@@ -31,6 +35,7 @@ public class PageCarte extends JFrame{
 
         this.deconnexion = new JButton("Se deconnecter");
         this.deconnexion.setPreferredSize(new Dimension(200, 50));
+        this.deconnexion.addActionListener(this.listener);
         JPanel hautDroit = new JPanel();
         hautDroit.setLayout(new FlowLayout(FlowLayout.RIGHT));
         hautDroit.add(this.deconnexion);

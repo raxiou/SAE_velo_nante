@@ -1,6 +1,9 @@
 package vue;
 
 import javax.swing.*;
+
+import action.PageAccueilListeneur;
+
 import java.awt.*;
 
 public class PageAccueil extends JFrame{
@@ -17,7 +20,7 @@ public class PageAccueil extends JFrame{
 
 
 
-    //private PremierePageListener listener;
+  private PageAccueilListeneur listener;
 
     public PageAccueil() {
 
@@ -26,6 +29,7 @@ public class PageAccueil extends JFrame{
     }
 
     private void initComponents() {
+        this.listener = new PageAccueilListeneur(this);
         this.cPresentation = new JLabel("<html>Bonjour et bienvenue</html>");
         this.gPresentation = new JLabel("<html>Si vous souhaitez accéder aux informations sur les données récoltées par nos capteurs</html>");
         this.dPresentation = new JLabel("<html>Si vous souhaitez accéder au taux de fréquentation des cyclistes</html>");
@@ -41,20 +45,24 @@ public class PageAccueil extends JFrame{
         this.gPresentation.setFont(texte);
         this.gPresentation.setHorizontalAlignment(JLabel.CENTER);
 
-        this.droite = new JButton("Cliquez ici");
+
+        this.droite = new JButton("Cliquez là");
         this.droite.setPreferredSize(new Dimension(400, 100));
+        this.droite.addActionListener(this.listener);
         JPanel aDroite = new JPanel();
         aDroite.setLayout(new FlowLayout());
         aDroite.add(this.droite);
 
         this.gauche = new JButton("Cliquez ici");
         this.gauche.setPreferredSize(new Dimension(400, 100));
+        this.gauche.addActionListener(this.listener);
         JPanel aGauche = new JPanel();
         aGauche.setLayout(new FlowLayout());
         aGauche.add(this.gauche);
 
         this.deconnexion = new JButton("Se deconnecter");
         this.deconnexion.setPreferredSize(new Dimension(200, 50));
+        this.deconnexion.addActionListener(this.listener);
         JPanel hautDroit = new JPanel();
         hautDroit.setLayout(new FlowLayout(FlowLayout.RIGHT));
         hautDroit.add(this.deconnexion);
