@@ -1,6 +1,9 @@
 package vue;
 
 import javax.swing.*;
+
+import action.CreatCompteListener;
+
 import java.awt.*;
 
 public class CreatCompte extends JFrame{
@@ -23,7 +26,7 @@ public class CreatCompte extends JFrame{
     
 
 
-    //private PremierePageListener listener;
+    private CreatCompteListener listener;
 
     public CreatCompte() {
 
@@ -32,6 +35,7 @@ public class CreatCompte extends JFrame{
     }
 
     private void initComponents() {
+        this.listener = new CreatCompteListener(this);
         this.cPresentation = new JLabel("<html>Bonjour et bienvenue</html>");
         this.lPresentation = new JLabel("<html>Pour créer un compte, vous devez remplir les champs suivants.<br>"
         + "Les champs indiqués avec une * sont obligatoires.</html>");
@@ -85,9 +89,9 @@ public class CreatCompte extends JFrame{
 
         /*JPanel textePanel = new JPanel(new FlowLayout());
         textePanel.add(this.lPresentation);*/
-
         this.confirmation = new JButton("Confirmer");
         this.confirmation.setPreferredSize(new Dimension(400, 100));
+        this.confirmation.addActionListener(this.listener);
         JPanel conf = new JPanel();
         conf.setLayout(new FlowLayout());
         conf.add(this.confirmation);
