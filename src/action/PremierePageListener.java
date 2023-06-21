@@ -1,6 +1,5 @@
 package action;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import vue.CreatCompte;
@@ -34,7 +33,7 @@ public class PremierePageListener implements ActionListener {
             // les identifiants sont bien enregistrés
             JOptionPane.showMessageDialog(this.frame, "Connexion réussie !");
             // on affiche la page de connexion
-            PageAccueil laFrame  = new PageAccueil();
+            PageAccueil laFrame  = new PageAccueil(frame.getData());
             laFrame.pack();
             laFrame.setSize(new Dimension(1920, 1080));
             laFrame.setVisible(true);

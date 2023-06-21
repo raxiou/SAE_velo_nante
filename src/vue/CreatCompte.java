@@ -6,7 +6,6 @@ import action.CreatCompteListener;
 import modele.DataListe;
 
 import java.awt.*;
-import java.awt.event.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -180,7 +179,7 @@ public class CreatCompte extends JFrame{
 
     public void saveCredentials(String username, String password) {
         try {
-            FileWriter writer = new FileWriter("/home/calypso/Documents/Cours/SAE/Vélos/Site/SAE_velo_nante/data/credentials.txt", true);
+            FileWriter writer = new FileWriter("data\\credentials.txt", true);
             writer.write(username + "," + password + "\n");
             writer.close();
         } catch (IOException e) {

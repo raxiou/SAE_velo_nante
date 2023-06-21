@@ -148,7 +148,7 @@ public class PremierePage extends JFrame{
 
     public boolean checkCredentials(String username, String password) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("/home/calypso/Documents/Cours/SAE/Vélos/Site/SAE_velo_nante/data/credentials.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("data\\credentials.txt"));
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] credentials = line.split(",");
