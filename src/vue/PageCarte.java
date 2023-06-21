@@ -4,10 +4,13 @@ import javax.swing.*;
 
 import action.MouseListenerClique;
 import action.PageCarteListener;
+import modele.DataListe;
 
 import java.awt.*;
 
 public class PageCarte extends JFrame{
+    private DataListe data;
+
     private JLabel logoEntreprise;
     private JLabel flecheRetour;
     private JLabel carte;
@@ -21,10 +24,15 @@ public class PageCarte extends JFrame{
     private PageCarteListener listener;
     private MouseListenerClique listenerClique;
 
-    public PageCarte() {
+    public PageCarte(DataListe data) {
+        this.data = data;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+    }
+
+    public DataListe getData() {
+        return this.data;
     }
 
     private void initComponents() {

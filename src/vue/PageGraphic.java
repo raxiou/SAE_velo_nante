@@ -4,11 +4,14 @@ import javax.swing.*;
 
 import action.MouseListenerClique;
 import action.PageGraphicListener;
+import modele.DataListe;
 import vue.enumeration.*;
 
 import java.awt.*;
 
 public class PageGraphic extends JFrame{
+    private DataListe data;
+
     private JLabel logoEntreprise;
     private JLabel flecheRetour;
     private JLabel carte;
@@ -23,10 +26,14 @@ public class PageGraphic extends JFrame{
     private PageGraphicListener listener;
     private MouseListenerClique listenerClique;
 
-    public PageGraphic() {
+    public PageGraphic(DataListe data) {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+    }
+
+    public DataListe getData() {
+        return this.data;
     }
 
     private void initComponents() {
@@ -63,6 +70,7 @@ public class PageGraphic extends JFrame{
 
         this.reload = new JButton("Actualiser");
         this.reload.setPreferredSize(new Dimension(200, 50));
+        this.reload.addActionListener(this.listener);
         JPanel act = new JPanel();
         act.setLayout(new FlowLayout());
         act.add(this.reload);
@@ -105,6 +113,18 @@ public class PageGraphic extends JFrame{
         this.add(gauche, BorderLayout.CENTER);
 
 
+    }
+
+    public String getChampPiste() {
+        return this.champPiste.getText();
+    }
+
+    public String getAnnee() {
+        return this.annee.getSelectedItem().toString();
+    }
+
+    public String getTempo() {
+        return this.tempo.getSelectedItem().toString();
     }
 
     public static void main(String[] args) {

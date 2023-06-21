@@ -3,14 +3,13 @@ package action;
 import java.awt.Dimension;
 import java.awt.event.MouseListener;
 
-import javax.swing.JFrame;
-
 import vue.PageAccueil;
+import vue.PageCarte;
 
 public class MouseListenerClique implements MouseListener {
-    private JFrame frame;
+    private PageCarte frame;
 
-    public MouseListenerClique(JFrame frame) {
+    public MouseListenerClique(PageCarte frame) {
         this.frame = frame;
     }
     
@@ -18,7 +17,7 @@ public class MouseListenerClique implements MouseListener {
     public void mouseClicked(java.awt.event.MouseEvent e) {
 
 
-        PageAccueil laFrame  = new PageAccueil();
+        PageAccueil laFrame  = new PageAccueil(frame.getData());
         laFrame.pack();
         laFrame.setSize(new Dimension(1920, 1080));
         laFrame.setVisible(true);

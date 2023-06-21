@@ -4,14 +4,13 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-
+import vue.PageCarte;
 import vue.PremierePage;
 
 public class PageCarteListener implements ActionListener {
-    private JFrame frame;
+    private PageCarte frame;
 
-    public PageCarteListener(JFrame frame) {
+    public PageCarteListener(PageCarte frame) {
         this.frame = frame;
     }
 
@@ -24,7 +23,7 @@ public class PageCarteListener implements ActionListener {
         if (nomBouton.equals("Se deconnecter")) {
             // on affiche la page d'Acueil
             
-            PremierePage laFrame  = new PremierePage();
+            PremierePage laFrame  = new PremierePage(frame.getData());
             laFrame.pack();
             laFrame.setSize(new Dimension(1920, 1080));
             laFrame.setVisible(true);

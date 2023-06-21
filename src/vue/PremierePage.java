@@ -3,10 +3,13 @@ package vue;
 import javax.swing.*;
 
 import action.PremierePageListener;
+import modele.DataListe;
 
 import java.awt.*;
 
 public class PremierePage extends JFrame{
+    private DataListe data;
+
     private JLabel cPresentation;
     private JLabel lPresentation;
     private JLabel petitLabel;
@@ -23,7 +26,8 @@ public class PremierePage extends JFrame{
 
     private PremierePageListener listener;
 
-    public PremierePage() {
+    public PremierePage(DataListe data) {
+        this.data = data;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
@@ -124,6 +128,10 @@ public class PremierePage extends JFrame{
         this.add(cO);
         this.add(new JLabel());
 
+    }
+
+    public DataListe getData() {
+        return data;
     }
 
     public static void main(String[] args) {

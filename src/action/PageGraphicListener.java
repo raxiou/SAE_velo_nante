@@ -4,14 +4,14 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-
+import modele.objectBddListe.ListeDataCompteurJour;
+import vue.PageGraphic;
 import vue.PremierePage;
 
 public class PageGraphicListener implements ActionListener {
-    private JFrame frame;
+    private PageGraphic frame;
 
-    public PageGraphicListener(JFrame frame) {
+    public PageGraphicListener(PageGraphic frame) {
         this.frame = frame;
     }
 
@@ -24,11 +24,18 @@ public class PageGraphicListener implements ActionListener {
         if (nomBouton.equals("Se deconnecter")) {
             // on affiche la page d'Acueil
             
-            PremierePage laFrame  = new PremierePage();
+            PremierePage laFrame  = new PremierePage(frame.getData());
             laFrame.pack();
             laFrame.setSize(new Dimension(1920, 1080));
             laFrame.setVisible(true);
             this.frame.setVisible(false);
+                        
+        }
+        if(nomBouton.equals("Actualiser")) {
+            System.out.println("Actualiser");
+            ListeDataCompteurJour listeDataCompteurJour = frame.getData().getListeDataCompteurJour();
+
+
                         
         }
     }
