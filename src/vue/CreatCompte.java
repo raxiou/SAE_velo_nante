@@ -3,10 +3,13 @@ package vue;
 import javax.swing.*;
 
 import action.CreatCompteListener;
+import modele.DataListe;
 
 import java.awt.*;
 
 public class CreatCompte extends JFrame{
+    private DataListe data;
+
     private JLabel cPresentation;
     private JLabel lPresentation;
     private JLabel logoEntreprise;
@@ -28,10 +31,15 @@ public class CreatCompte extends JFrame{
 
     private CreatCompteListener listener;
 
-    public CreatCompte() {
+    public CreatCompte(DataListe data) {
+        this.data = data;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+    }
+
+    public DataListe getData() {
+        return this.data;
     }
 
     private void initComponents() {
@@ -141,17 +149,6 @@ public class CreatCompte extends JFrame{
 
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                CreatCompte laFrame  = new CreatCompte();
-                laFrame.pack();
-                laFrame.setSize(1920, 1080);
-                laFrame.setVisible(true);
-            }
-        });
-
-    }
 
 
 }

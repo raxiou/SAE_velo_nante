@@ -34,6 +34,7 @@ public class PageGraphicListener implements ActionListener {
         if(nomBouton.equals("Actualiser")) {
             System.out.println("Actualiser");
             ListeDataCompteurJour listeDataCompteurJour = frame.getData().getListeDataCompteurJour();
+            
 
 
                         

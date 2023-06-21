@@ -3,10 +3,13 @@ package vue;
 import javax.swing.*;
 
 import action.PageAccueilListeneur;
+import modele.DataListe;
 
 import java.awt.*;
 
 public class PageAccueil extends JFrame{
+    private DataListe data;
+
     private JLabel cPresentation;
     private JLabel gPresentation;
     private JLabel dPresentation;
@@ -22,10 +25,15 @@ public class PageAccueil extends JFrame{
 
   private PageAccueilListeneur listener;
 
-    public PageAccueil() {
+    public PageAccueil(DataListe data) {
+        this.data = data;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.initComponents();
+    }
+
+    public DataListe getData() {
+        return this.data;
     }
 
     private void initComponents() {
@@ -99,18 +107,6 @@ public class PageAccueil extends JFrame{
         this.add(new JLabel());
         this.add(new JLabel());
         this.add(new JLabel());
-
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                PageAccueil laFrame  = new PageAccueil();
-                laFrame.pack();
-                laFrame.setSize(new Dimension(1920, 1080));
-                laFrame.setVisible(true);
-            }
-        });
 
     }
 

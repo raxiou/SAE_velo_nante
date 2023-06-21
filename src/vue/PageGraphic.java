@@ -2,7 +2,7 @@ package vue;
 
 import javax.swing.*;
 
-import action.MouseListenerClique;
+import action.MouseListenerCliquePG;
 import action.PageGraphicListener;
 import modele.DataListe;
 import vue.enumeration.*;
@@ -24,7 +24,7 @@ public class PageGraphic extends JFrame{
     private JButton reload;
 
     private PageGraphicListener listener;
-    private MouseListenerClique listenerClique;
+    private MouseListenerCliquePG listenerClique;
 
     public PageGraphic(DataListe data) {
 
@@ -38,7 +38,7 @@ public class PageGraphic extends JFrame{
 
     private void initComponents() {
         this.listener = new PageGraphicListener(this);
-        this.listenerClique = new MouseListenerClique(this);
+        this.listenerClique = new MouseListenerCliquePG(this);
         this.annee = new JComboBox<Annee>(Annee.values());
         this.annee.setPreferredSize(new Dimension(200, 50));
         JPanel bA = new JPanel(new FlowLayout());
@@ -127,17 +127,6 @@ public class PageGraphic extends JFrame{
         return this.tempo.getSelectedItem().toString();
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                PageGraphic laFrame  = new PageGraphic();
-                laFrame.pack();
-                laFrame.setSize(1920, 1080);
-                laFrame.setVisible(true);
-            }
-        });
-
-    }
 
 
 }
