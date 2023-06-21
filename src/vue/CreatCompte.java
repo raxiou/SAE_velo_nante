@@ -6,6 +6,11 @@ import action.CreatCompteListener;
 import modele.DataListe;
 
 import java.awt.*;
+import java.awt.event.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class CreatCompte extends JFrame{
     private DataListe data;
@@ -25,9 +30,6 @@ public class CreatCompte extends JFrame{
     private JCheckBox newLetters;
 
     private JButton confirmation;
-
-    
-
 
     private CreatCompteListener listener;
 
@@ -147,6 +149,43 @@ public class CreatCompte extends JFrame{
         this.add(conf);
         this.add(new JLabel());
 
+    }
+
+    public String getNom(){
+        return this.champNom.getText();
+    }
+
+    public String getMDP(){
+        return this.champMDP.getText();
+    }
+
+    public boolean checkUsernameAvailability(String username) {
+      try {
+        BufferedReader reader = new BufferedReader(new FileReader("/home/calypso/Documents/Cours/SAE/V\u00E9los/Site/SAE_velo_nante/data/credentials.txt"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+          String[] credentials = line.split(",");
+          String existingUsername = credentials[0];
+          if (existingUsername.equals(username)) {
+            reader.close();
+            return false; // Le nom d'utilisateur existe déjà
+          }
+        }
+        reader.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      return true; // Le nom d'utilisateur est disponible
+    }
+
+    public void saveCredentials(String username, String password) {
+        try {
+            FileWriter writer = new FileWriter("/home/calypso/Documents/Cours/SAE/Vélos/Site/SAE_velo_nante/data/credentials.txt", true);
+            writer.write(username + "," + password + "\n");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

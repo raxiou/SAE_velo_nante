@@ -6,6 +6,9 @@ import action.PremierePageListener;
 import modele.DataListe;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class PremierePage extends JFrame{
     private DataListe data;
@@ -132,6 +135,35 @@ public class PremierePage extends JFrame{
 
     public DataListe getData() {
         return data;
+    }
+
+    // getters
+    public String getNom(){
+        return this.champNom.getText();
+    }
+
+    public String getMDP(){
+        return this.champMDP.getText();
+    }
+
+    public boolean checkCredentials(String username, String password) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("/home/calypso/Documents/Cours/SAE/Vélos/Site/SAE_velo_nante/data/credentials.txt"));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] credentials = line.split(",");
+                String existingUsername = credentials[0];
+                String existingPassword = credentials[1];
+                if (existingUsername.equals(username) && existingPassword.equals(password)) {
+                    reader.close();
+                    return true; // Les identifiants sont valides
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false; // Les identifiants sont incorrects
     }
 
 
