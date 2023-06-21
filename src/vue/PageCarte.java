@@ -2,7 +2,7 @@ package vue;
 
 import javax.swing.*;
 
-import action.MouseListenerClique;
+import action.MouseListenerCliquePC;
 import action.PageCarteListener;
 import modele.DataListe;
 
@@ -22,7 +22,7 @@ public class PageCarte extends JFrame{
 
 
     private PageCarteListener listener;
-    private MouseListenerClique listenerClique;
+    private MouseListenerCliquePC listenerClique;
 
     public PageCarte(DataListe data) {
         this.data = data;
@@ -37,7 +37,7 @@ public class PageCarte extends JFrame{
 
     private void initComponents() {
         this.listener = new PageCarteListener(this);
-        this.listenerClique = new MouseListenerClique(this);
+        this.listenerClique = new MouseListenerCliquePC(this);
 
         this.telecharger = new JButton("Télécharger");
         this.telecharger.setPreferredSize(new Dimension(400, 100));
@@ -88,18 +88,6 @@ public class PageCarte extends JFrame{
         this.add(this.carte, BorderLayout.CENTER);
         this.add(tel, BorderLayout.SOUTH);
 
-
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                PageCarte laFrame  = new PageCarte();
-                laFrame.pack();
-                laFrame.setSize(1920, 1080);
-                laFrame.setVisible(true);
-            }
-        });
 
     }
 

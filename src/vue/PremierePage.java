@@ -134,17 +134,5 @@ public class PremierePage extends JFrame{
         return data;
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                PremierePage laFrame  = new PremierePage();
-                laFrame.pack();
-                laFrame.setSize(1920, 1080);
-                laFrame.setVisible(true);
-            }
-        });
-
-    }
-
 
 }

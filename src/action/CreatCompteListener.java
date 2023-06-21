@@ -4,14 +4,13 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-
+import vue.CreatCompte;
 import vue.PageAccueil;
 
 public class CreatCompteListener implements ActionListener {
-    private JFrame frame;
+    private CreatCompte frame;
 
-    public CreatCompteListener(JFrame frame) {
+    public CreatCompteListener(CreatCompte frame) {
         this.frame = frame;
     }
 
@@ -24,7 +23,7 @@ public class CreatCompteListener implements ActionListener {
         if (nomBouton.equals("Confirmer")) {
             // on affiche la page d'Acueil
             
-            PageAccueil laFrame  = new PageAccueil();
+            PageAccueil laFrame  = new PageAccueil(frame.getData());
             laFrame.pack();
             laFrame.setSize(new Dimension(1920, 1080));
             laFrame.setVisible(true);
