@@ -54,14 +54,14 @@ public class PageCarte extends JFrame{
         hautDroit.add(this.deconnexion);
 
         this.map = new HashMap<String, ImageIcon>();
-        this.map.put("Total quotidient de passage des cyclistes", new ImageIcon("../data/image/Graph1.png"));
-        this.map.put("Nombre de compteurs par quartier", new ImageIcon("../data/image/Graph2.png"));
-        this.map.put("Top 5 des quarties avec le plus grand nombre de cyclistes", new ImageIcon("../data/image/Graph3.png"));
-        this.map.put("Longueur des pistes cyclables par quartier", new ImageIcon("../data/image/Graph4.png"));
-        this.map.put("Répartition des compteurs par anomalie", new ImageIcon("../data/image/Graph5.png"));
-        this.map.put("Variation de température par jour", new ImageIcon("../data/image/Graph6.png"));
-        this.map.put("Nombre total de cyclistes par quartier", new ImageIcon("../data/image/Graph7.png"));
-        this.map.put("Nombre de cyclistes par quartier à une date donnée (heure 8)", new ImageIcon("../data/image/Graph8.png"));
+        this.map.put("Total quotidient de passage des cyclistes", new ImageIcon("data\\imageCarte\\Graph1.png"));
+        this.map.put("Nombre de compteurs par quartier", new ImageIcon("data\\imageCarte\\Graph2.png"));
+        this.map.put("Top 5 des quarties avec le plus grand nombre de cyclistes", new ImageIcon("data\\imageCarte\\Graph3.png"));
+        this.map.put("Longueur des pistes cyclables par quartier", new ImageIcon("data\\imageCarte\\Graph4.png"));
+        this.map.put("Répartition des compteurs par anomalie", new ImageIcon("data\\imageCarte\\Graph5.png"));
+        this.map.put("Variation de température par jour", new ImageIcon("data\\imageCarte\\Graph6.png"));
+        this.map.put("Nombre total de cyclistes par quartier", new ImageIcon("data\\imageCarte\\Graph7.png"));
+        this.map.put("Nombre de cyclistes par quartier à une date donnée (heure 8)", new ImageIcon("data\\imageCarte\\Graph8.png"));
 
         this.sGraph = new JComboBox<String>();
         this.sGraph.addItem("Total quotidient de passage des cyclistes");
