@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import modele.objectBddListe.ListeDataCompteurJour;
 import vue.PageGraphic;
 import vue.PremierePage;
 
@@ -33,8 +32,14 @@ public class PageGraphicListener implements ActionListener {
         }
         if(nomBouton.equals("Actualiser")) {
             System.out.println("Actualiser");
-            ListeDataCompteurJour listeDataCompteurJour = frame.getData().getListeDataCompteurJour();
-            
+            if(this.frame.getTempo().equals("Jour")){
+                frame.creerGraphiqueJour();
+            }
+            if(this.frame.getTempo().equals("Mois")){
+                frame.creerGraphiqueMois();
+            }
+            System.out.println(5);
+
 
 
                         

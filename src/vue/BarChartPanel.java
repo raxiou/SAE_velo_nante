@@ -26,7 +26,7 @@ public class BarChartPanel extends JPanel {
         int barHeight;
 
         // Dessiner l'échelle
-        int scaleStep = maxValue / 5; // Pas de l'échelle
+        int scaleStep = maxValue / 10; // Pas de l'échelle
         int scaleValue = 0;
         int scaleSpacing = panelHeight / 5;
         g.setColor(Color.BLACK); // Couleur de l'échelle
@@ -49,10 +49,9 @@ public class BarChartPanel extends JPanel {
             g.drawString(names[i], x, getHeight() - 5);
         }
         
-        // Dessiner le nom de la variable ("score")
         g.setColor(Color.BLACK);
         g.setFont(new Font("Arial", Font.BOLD, 12));
-        g.drawString("Score", 10, getHeight() - 25);
+        g.drawString("Valeur", 10, getHeight() - 25);
     }
 
     private int getMaxValue() {
